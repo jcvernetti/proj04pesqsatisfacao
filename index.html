@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa XYZ</title>
+</head>
+
+<body>
+    <!--4. A empresa XYZ quer exibir um formulário de pesquisa de satisfação ao termino de seu atendimento online. 
+        Crie uma tela com perguntas e respostas do tipo multipla-escolha:
+a. Sua solicitação foi atendida? (não foi atendida, parcialmente atendida, totalmente atendida)
+b. Qual nota você daria para o atendimento? (péssimo, ruim, aceitável, bom, excelente)
+c. Como você classificaria o comportamento do atendente? (Indelicado, Mau humorado, Neutro, Educado, Muito Atencioso)
+d. De 0 à 10, qual nota você daria para o produto (utilize range)
+e. Informe Sua idade (campo numérico)
+f. Informa seu Gênero (Masculino/Feminino/LGBT)-->
+    <h1>
+        <center>Empresa XYZ</center>
+    </h1>
+    <h3>
+        <center>Pesquisa de satisfação</center>
+    </h3>
+    <form action="" method="GET" oninput="nmOut.value = nmRange.value">
+    <fieldset>
+        <legend>Por favor, responda as seguintes questões:</legend>
+        <!-- Questão a -->
+        <br><br>
+        <label for="idListSolicita">a. Sua solicitação foi atendida?</label>
+        <input list="solicita" id="idListSolicita">
+        <datalist id="solicita">
+            <option value="Não foi atendida">  
+            <option value="Parcialmente atendida"></option>
+            <option value="Totalmente atendida"></option>
+        </datalist>
+        <br>
+         <!-- Questão b -->
+         <br><br>
+         <label for="idListAtende">b. Qual nota você daria para o atendimento?</label>
+         <input list="atende" id="idListAtende">
+         <datalist id="atende">
+             <option value="Péssimo">   
+             <option value="Ruim"></option>
+             <option value="Aceitável"></option>
+             <option value="Bom"></option>
+             <option value="Excelente"></option>
+         </datalist>
+                  
+         <!-- Questão c -->
+         <br><br>
+         <label for="idListAtende">c. Como você classificaria o comportamento do atendente?</label>
+         <input list="atende" id="idListAtende">
+         <datalist id="atende">
+             <option value="Indelicado">   , , , , 
+             <option value="Mau humorado"></option>
+             <option value="Neutro"></option>
+             <option value="Educado"></option>
+             <option value="Muito Atencioso"></option>
+         </datalist>
+
+         <!-- Questão d -->
+         <br><br>
+         <label for="idRange">d. De 0 à 10, qual nota você daria para o produto?</label>
+         <input type="range" id="idRange" name="nmRange" min="0" max="10" value="7">
+         <output name="nmOut" for="idRange" >7</output>
+
+         <!-- Questão e -->
+         <br><br>
+         <label for="idIdade">e. Informe Sua idade:</label>
+         <input type="number" id="idIdade" name="nmIdade" min="0" max="110" step="1"  >
+
+         <!-- Questão f -->
+         <br><br>
+                
+         <input type="radio" id="idRadio1" name="nmRadio" checked>
+         <label for="idRadio1">Masculino</label>
+         <br>
+         <input type="radio" id="idRadio2" name="nmRadio">
+         <label for="idRadio2">Feminino</label>
+         <br>
+         <input type="radio" id="idRadio3" name="nmRadio">
+         <label for="idRadio3">LGBT</label>
+
+       
+        <br><br>
+        <button type="submit">BT Enviar</button>
+    </fieldset>
+    </form>
+
+</body>
+
+</html>
