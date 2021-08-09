@@ -1,0 +1,64 @@
+.cAnima {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(243, 237, 237);
+    position:sticky;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+}
+
+@keyframes example {
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+
+.Titulo{
+    color: rgb(19, 163, 115);
+    font-weight: bolder;
+}
+
+.cr1{
+    font-weight: bolder;
+    color: blueviolet;
+
+    width: 150px;
+    height: 10px;
+    background-color: rgb(243, 237, 237);
+    position:relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 2;
+}
+.cr2{
+    font-weight: bold;
+    color: rgb(43, 226, 58);
+}
+.cr3{
+    font-weight:bold;
+    color: rgb(226, 43, 171);
+}
+
+.calimac{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(243, 237, 237);
+    position:relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: reverse;
+}
+
+@keyframes example {
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+}
