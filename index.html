@@ -5,92 +5,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
     <title>Empresa XYZ</title>
 
-    <link rel="stylesheet" href="estilos.css">
+    
 
 </head>
 
 <body>
-    <!--4. A empresa XYZ quer exibir um formulário de pesquisa de satisfação ao termino de seu atendimento online. 
-        Crie uma tela com perguntas e respostas do tipo multipla-escolha:
-a. Sua solicitação foi atendida? (não foi atendida, parcialmente atendida, totalmente atendida)
-b. Qual nota você daria para o atendimento? (péssimo, ruim, aceitável, bom, excelente)
-c. Como você classificaria o comportamento do atendente? (Indelicado, Mau humorado, Neutro, Educado, Muito Atencioso)
-d. De 0 à 10, qual nota você daria para o produto (utilize range)
-e. Informe Sua idade (campo numérico)
-f. Informa seu Gênero (Masculino/Feminino/LGBT)-->
-    <h1 class="Titulo">
-        <center>Empresa XYZ</center>
-    </h1>
-    <h3>
-        <center>Pesquisa de satisfação</center>
-    </h3>
-    <form action="" method="GET" oninput="nmOut.value = nmRange.value">
-        <fieldset>
-            <legend>Por favor, responda as seguintes questões:</legend>
+    <div class="container">
+    
+    <h1 class="Titulo">Empresa XYZ    </h1>
+    <h5>Pesquisa de satisfação: Por favor, responda as questões abaixo.</h5>
+        <form action="" method="GET" oninput="nmOut.value = nmRange.value">
+            
             <!-- Questão a -->
-            <br><br>
-            <label class="cAnima" for="idListSolicita">a. Sua solicitação foi atendida?</label>
-            <input list="solicita" id="idListSolicita">
-            <datalist id="solicita">
-                <option value="Não foi atendida">
-                <option value="Parcialmente atendida"></option>
-                <option value="Totalmente atendida"></option>
-            </datalist>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="idListSolicita">a. Sua solicitação foi atendida?</label>
+                    <input class="form-control" list="datalistOptions" id="idListSolicita" >
+                    <datalist id="datalistOptions">
+                        <option value="Não foi atendida">
+                        <option value="Parcialmente atendida">
+                        <option value="Totalmente atendida">
+                    </datalist>
+                </div>
+                <div class="col-4">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
             <br>
+            
+        
             <!-- Questão b -->
-            <br><br>
-            <label for="idListAtende">b. Qual nota você daria para o atendimento?</label>
-            <input list="atende" id="idListAtende">
-            <datalist id="atende">
-                <option value="Péssimo">
-                <option value="Ruim"></option>
-                <option value="Aceitável"></option>
-                <option value="Bom"></option>
-                <option value="Excelente"></option>
-            </datalist>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="idListAtende">b. Qual nota você daria para o atendimento?</label>
+                    <input class="form-control" list="datalistOptions"  id="idListAtende" >
+                    <datalist id="datalistOptions">
+                        <option value="Péssimo">
+                        <option value="Ruim"></option>
+                        <option value="Aceitável"></option>
+                        <option value="Bom"></option>
+                        <option value="Excelente"></option>
+                    </datalist>
+                </div>
+                <div class="col-4">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
+            <br>
+            
 
             <!-- Questão c -->
-            <br><br>
-            <label class="calimac" for="idListAtende">c. Como você classificaria o comportamento do atendente?</label>
-            <input list="atende" id="idListAtende">
-            <datalist id="atende">
-                <option value="Indelicado"> , , , ,
-                <option value="Mau humorado"></option>
-                <option value="Neutro"></option>
-                <option value="Educado"></option>
-                <option value="Muito Atencioso"></option>
-            </datalist>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="idListAtende">c. Como você classificaria o comportamento do atendente?</label>
+                    <input list="atende" class="form-control" id="idListAtende" >
+                    <datalist id="atende" >
+                        <option value="Indelicado"> 
+                        <option value="Mau humorado"></option>
+                        <option value="Neutro"></option>
+                        <option value="Educado"></option>
+                        <option value="Muito Atencioso"></option>
+                    </datalist>
+                </div>
+                <div class="col-2">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
+            <br>
 
+        
             <!-- Questão d -->
-            <br><br>
-            <label for="idRange">d. De 0 à 10, qual nota você daria para o produto?</label>
-            <input type="range" id="idRange" name="nmRange" min="0" max="10" value="7">
-            <output name="nmOut" for="idRange">7</output>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="idRange">d. De 0 à 10, qual nota você daria para o produto?</label> 
+                    <input class="form-range" type="range" id="idRange" class="control" name="nmRange" min="0" max="10" value="7">
+                    <output name="nmOut" for="idRange"><span class="badge bg-secondary">7</span></output>
+                    
+
+                </div>
+                <div class="col-4">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
+            <br>
 
             <!-- Questão e -->
-            <br><br>
-            <label for="idIdade">e. Informe Sua idade:</label>
-            <input type="number" id="idIdade" name="nmIdade" min="0" max="110" step="1">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="idIdade">e. Informe Sua idade:</label>
+                    <input class="form-control" type="number" id="idIdade" name="nmIdade" min="0" max="110" step="1">
+                </div>
+                <div class="col-8">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
+            <br>
 
             <!-- Questão f -->
-            <br><br>
-
-            <input type="radio" id="idRadio1" name="nmRadio" checked>
-            <label class="cr1" for="idRadio1">Masculino</label>
+            <div class="row">
+                <div class="col">
+                    <input type="radio" id="idRadio1" name="nmRadio" checked>
+                    <label class="cr1" for="idRadio1">Masculino</label>
+                    <br>
+                    <input type="radio" id="idRadio2" name="nmRadio">
+                    <label class="cr2" for="idRadio2">Feminino</label>
+                    <br>
+                    <input type="radio" id="idRadio3" name="nmRadio">
+                    <label class="cr3" for="idRadio3">LGBT</label>
+                </div>
+                <div class="col-6">
+                  
+                </div>
+                <div class="col">
+                  
+                </div>
+            </div>
             <br>
-            <input type="radio" id="idRadio2" name="nmRadio">
-            <label class="cr2" for="idRadio2">Feminino</label>
-            <br>
-            <input type="radio" id="idRadio3" name="nmRadio">
-            <label class="cr3" for="idRadio3">LGBT</label>
+            <button type="submit" class="btn btn-primary">BT Enviar</button>
 
+            <br><br><br>
 
-            <br><br>
-            <button type="submit">BT Enviar</button>
-        </fieldset>
-    </form>
+            
+
+        </form>
+    </div>
+    <br><br>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
 </body>
 
